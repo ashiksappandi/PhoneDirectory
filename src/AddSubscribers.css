@@ -20,15 +20,11 @@
     cursor: pointer;
 }
 
-.btn-add{
-    background: #84c185;
-    color: #FFF;
-}
-
-.btn-delete{
-    background: #fa9b9c;
+.btn-back{
+    background: #d3d3d3;
     color: #333;
 }
+
 
 .subscriber-item{
     display: flex;

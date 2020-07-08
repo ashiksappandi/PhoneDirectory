@@ -4,6 +4,10 @@ import './App.css'
 
 class App extends Component {
 
+    clickHandler(message){
+        alert(message);
+    }
+
     render() {
 
         let subscribers = [
@@ -38,7 +42,7 @@ class App extends Component {
                                     <div className='subscriber-item' key={sub.id}>
                                         <span className='col col-data col-name'>{sub.name}</span>
                                         <span className='col col-data col-phone'>{sub.phone}</span>
-                                        <button className='btn btn-delete'>Delete</button>
+                                        <button className='btn btn-delete' onClick={this.clickHandler.bind(this, "Delete Clicked!")}>Delete</button>
                                     </div>
                                 )
                             })
