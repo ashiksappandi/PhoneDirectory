@@ -2,26 +2,33 @@ import React, {Component} from 'react';
 import Header from "./Header";
 import './App.css'
 
+/*let subscribers = [
+    {
+        id: 1,
+        name: 'Ashik',
+        phone: '9878945676'
+    },
+    {
+        id: 2,
+        name: 'Anita',
+        phone: '7456789244'
+    }
+]*/
+
 class App extends Component {
 
     clickHandler(message){
         alert(message);
     }
 
-    render() {
+    constructor() {
+        super();
+        this.state = {
+            subscriberListToShow:[]
+        }
+    }
 
-        let subscribers = [
-            {
-                id: 1,
-                name: 'Ashik',
-                phone: '9878945676'
-            },
-            {
-                id: 2,
-                name: 'Anita',
-                phone: '7456789244'
-            }
-        ]
+    render() {
 
         return (
             <div className='main-page'>
@@ -37,7 +44,7 @@ class App extends Component {
 
                         </div>
                         {
-                            subscribers.map(sub => {
+                            this.state.subscriberListToShow.map(sub => {
                                 return(
                                     <div className='subscriber-item' key={sub.id}>
                                         <span className='col col-data col-name'>{sub.name}</span>

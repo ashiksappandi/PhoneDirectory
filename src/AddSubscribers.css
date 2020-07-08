@@ -25,23 +25,24 @@
     color: #333;
 }
 
-
-.subscriber-item{
-    display: flex;
+.subscriber-form, .subscriber-info{
     margin: 10px auto;
 }
 
-.col{
-    width: 300px;
-
+.ipt{
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    padding: 5px;
+    width: 250px;
 }
 
-.col-head{
-    color: #666;
+.subscriber-info-heading{
+    color: #186ca3;
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 14px;
 }
 
-.col-data{
-    margin-top: 10px;
+.subscriber-info-data{
+    color: #333333;
+    font-size: 14px;
 }
