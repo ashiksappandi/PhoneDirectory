@@ -25,6 +25,11 @@
     color: #333;
 }
 
+.btn-add{
+    background: #84c185;
+    color: #FFF;
+}
+
 .subscriber-form, .subscriber-info{
     margin: 10px auto;
 }
