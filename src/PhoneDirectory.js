@@ -30,6 +30,19 @@ class PhoneDirectory extends Component{
         console.log(this.state.subscribersList);
     }
 
+    deleteSubscriberHandler = (subscriberId) => {
+        let subscribersList = this.state.subscribersList;
+        let subscriberIndex = 0;
+        subscribersList.forEach(function (subscriber, index) {
+            if (subscriber.id === subscriberId) {
+                subscriberIndex = index;
+            }
+        }, this);
+        let newSubscribers = subscribersList;
+        newSubscribers.splice(subscriberIndex, 1);
+        this.setState({subscribers: newSubscribers});
+    }
+
     render() {
         return(
             // <AddSubscribers addSubscriberHandler={this.addSubscriberHandler}/>
